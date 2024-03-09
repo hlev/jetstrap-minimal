@@ -1,8 +1,8 @@
 # Jetstrap Minimal
 ## A package for Laravel Jetstream (4.x) with Livewire (3.x) + Blade to replace TailwindCSS with Bootstrap 5.3
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/hlev/jetstrap-minimal.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-package-tools)
-[![Total Downloads](https://img.shields.io/packagist/dt/hlev/jetstrap-minimal.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-package-tools)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hlev/jetstrap-minimal.svg?style=flat-square)](https://packagist.org/packages/hlev/jetstrap-minimal)
+[![Total Downloads](https://img.shields.io/packagist/dt/hlev/jetstrap-minimal.svg?style=flat-square)](https://packagist.org/packages/hlev/jetstrap-minimal)
 
 Inspired by [joeycoonce/jetstrap/](https://github.com/joeycoonce/jetstrap/)
 
