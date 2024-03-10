@@ -1,6 +1,14 @@
 {
   "name": "hlev/jetstrap-minimal",
   "description": "A package for Laravel 10 to replace TailwindCSS with Bootstrap 5.3, Livewire + Blade, Teams",
+  "keywords": [
+    "laravel",
+    "jetstream",
+    "php",
+    "blade",
+    "livewire",
+    "bootstrap"
+  ],
   "require": {
     "php": "^8.1",
     "illuminate/contracts": "^10.0",
