@@ -6,28 +6,28 @@
 
         <div class="card-body">
             <div x-data="{ recovery: false }">
-                <div class="mb-3" x-show="! recovery">
+                <div class="mb-4" x-show="! recovery">
                     {{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
                 </div>
 
-                <div class="mb-3" x-show="recovery">
+                <div class="mb-4" x-show="recovery">
                     {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
                 </div>
 
-                <x-validation-errors class="mb-3" />
+                <x-validation-errors class="mb-4" />
 
                 <form method="POST" action="{{ route('two-factor.login') }}">
                     @csrf
 
-                    <div class="mb-3" x-show="! recovery">
-                        <x-label value="{{ __('Code') }}" />
+                    <div class="mt-4" x-show="! recovery">
+                        <x-label for="code" value="{{ __('Code') }}" />
                         <x-input class="{{ $errors->has('code') ? 'is-invalid' : '' }}" type="text"
                                      inputmode="numeric" name="code" autofocus x-ref="code" autocomplete="one-time-code" />
                         <x-input-error for="code"></x-input-error>
                     </div>
 
-                    <div class="mb-3" x-show="recovery">
-                        <x-label value="{{ __('Recovery Code') }}" />
+                    <div class="mt-4" x-cloak x-show="recovery">
+                        <x-label for="code" value="{{ __('Recovery Code') }}" />
                         <x-input class="{{ $errors->has('recovery_code') ? 'is-invalid' : '' }}" type="text"
                                      name="recovery_code" x-ref="recovery_code" autocomplete="one-time-code" />
                         <x-input-error for="recovery_code"></x-input-error>
@@ -44,6 +44,7 @@
                         </button>
 
                         <button type="button" class="btn btn-outline-secondary"
+                                x-cloak
                                 x-show="recovery"
                                 x-on:click="
                                             recovery = false;
@@ -52,7 +53,7 @@
                             {{ __('Use an authentication code') }}
                         </button>
 
-                        <x-button>
+                        <x-button class="ms-4">
                             {{ __('Log in') }}
                         </x-button>
                     </div>
