@@ -19,7 +19,7 @@
                 <div class="mb-3">
                     <x-label for="name" value="{{ __('Token Name') }}" />
                     <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}"
-                                 wire:model.defer="createApiTokenForm.name" autofocus />
+                                 wire:model="createApiTokenForm.name" autofocus />
                     <x-input-error for="name" />
                 </div>
 
@@ -33,7 +33,7 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <div class="form-check">
-                                            <x-checkbox wire:model.defer="createApiTokenForm.permissions" id="{{ 'create-'.$permission }}" :value="$permission"/>
+                                            <x-checkbox wire:model="createApiTokenForm.permissions" id="{{ 'create-'.$permission }}" :value="$permission"/>
                                             <label class="form-check-label" for="{{ 'create-'.$permission }}">
                                                 {{ $permission }}
                                             </label>
@@ -140,7 +140,7 @@
                     <div class="col-6">
                         <div class="mb-3">
                             <div class="form-check">
-                                <x-checkbox wire:model.defer="updateApiTokenForm.permissions" id="{{ 'update-'.$permission }}" :value="$permission"/>
+                                <x-checkbox wire:model="updateApiTokenForm.permissions" id="{{ 'update-'.$permission }}" :value="$permission"/>
                                 <label class="form-check-label" for="{{ 'update-'.$permission }}">
                                     {{ $permission }}
                                 </label>

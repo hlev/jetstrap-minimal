@@ -44,7 +44,7 @@
                 <x-secondary-button class="mt-2 me-2" type="button" x-on:click.prevent="$refs.photo.click()">
                     {{ __('Select A New Photo') }}
 				</x-secondary-button>
-				
+
 				@if ($this->user->profile_photo_path)
                     <x-secondary-button type="button" class="mt-2" wire:click="deleteProfilePhoto">
                         <div wire:loading wire:target="deleteProfilePhoto" class="spinner-border spinner-border-sm" role="status">
@@ -63,14 +63,14 @@
             <!-- Name -->
             <div class="mb-3">
                 <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model.defer="state.name" autocomplete="name" />
+                <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model="state.name" autocomplete="name" />
                 <x-input-error for="name" />
             </div>
 
             <!-- Email -->
             <div class="mb-3">
                 <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" wire:model.defer="state.email" />
+                <x-input id="email" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}" wire:model="state.email" />
                 <x-input-error for="email" />
             </div>
         </div>

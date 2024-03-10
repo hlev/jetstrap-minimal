@@ -25,7 +25,7 @@
             <div class="mb-3">
                 <x-label for="name" value="{{ __('Team Name') }}" />
                 <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}"
-                             wire:model.defer="state.name" autofocus />
+                             wire:model="state.name" autofocus />
                 <x-input-error for="name" />
             </div>
         </div>

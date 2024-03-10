@@ -33,7 +33,7 @@
                 <x-input id="name"
                              type="text"
                              class="{{ $errors->has('name') ? 'is-invalid' : '' }}"
-                             wire:model.defer="state.name"
+                             wire:model="state.name"
                              :disabled="! Gate::check('update', $team)" />
 
                 <x-input-error for="name" />
@@ -48,7 +48,7 @@
                     <div wire:loading class="spinner-border spinner-border-sm" role="status">
                         <span class="visually-hidden">Loading...</span>
                     </div>
-                    
+
 					{{ __('Save') }}
 				</x-button>
 			</div>

@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <x-label for="email" value="{{ __('Email') }}" />
                             <x-input id="name" type="email" class="{{ $errors->has('email') ? 'is-invalid' : '' }}"
-                                         wire:model.defer="addTeamMemberForm.email" />
+                                         wire:model="addTeamMemberForm.email" />
                             <x-input-error for="email" />
                         </div>
                     </div>
