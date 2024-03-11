@@ -45,9 +45,11 @@ You may want to or already have run:
 ./artisan livewire:publish
 ```
 Then update `config/livewire.php` to use `'bootstrap'` pagination. I did not test this.
+
 #### Fixes
 As for the components of the scaffolding, I mostly copied them over from [joeycoonce/jetstrap/](https://github.com/joeycoonce/jetstrap/), and fixed the following:
 - `switchable.team.blade`: `'jet-'` prefix removed in `@props[ 'component' => ...]` reference
 - `modal.blade.php`: `@entangle($attributes->wire('model'))` removed `.defer` to make modals work. As per [Livewire 3.x upgrade doc](https://livewire.laravel.com/docs/upgrading#entangle)
 - fixed inclusion of `@livewireStyles` and `@vite()` assets
-
+- added `@livewireScripts` to guest layout, since Jetstream 4.x uses Alpine on guest pages too
+- adjusted the 2FA template to 4.x
