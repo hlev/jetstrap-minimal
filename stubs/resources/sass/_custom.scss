@@ -1,0 +1,6 @@
+@include media-breakpoint-down(sm) {
+  .mx-3-w .x-logo {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
